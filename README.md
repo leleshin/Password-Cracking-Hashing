@@ -140,7 +140,7 @@ After extracting the PDF password-audit data, I saved the resulting **John-compa
 
 ### Screenshot 12: Hash2.txt — PDF2 Hash Record
 
-![Notepad showing the PDF hash record in Hash2.txt](images/12-PDF2-Hash-Text.png)
+![](Hash2.png)
 
 *Figure 12: The PDF2 hash representation recorded in Hash2.txt.*
 
