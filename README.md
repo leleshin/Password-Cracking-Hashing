@@ -105,7 +105,7 @@ I used the **OnlineHashCrack PDF Hash Extractor** web page to prepare an encrypt
 
 ### Screenshot 10: PDF Hash Extraction
 
-![OnlineHashCrack PDF hash extractor showing My Locked PDF3.pdf and extracted hash output](images/10-PDF-Hash-Extractor.png)
+![](PDF-Password-Extractor.png)
 
 *Figure 10: Browser-based PDF hash extraction for My Locked PDF3.pdf, with the extracted PDF hash visible in the output area.*
 
