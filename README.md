@@ -104,7 +104,7 @@ I examined the **Passwords** page, which displayed a recovered password for one 
 
 ### Screenshot 2: Password Recovery Result
 
-![Johnny recovered PDF password and status](images/02-Recovered-Password.png)
+![](Crack1.png)
 
 *Figure 2: Johnny listing the recovered password and reporting one cracked hash with none remaining.*
 
