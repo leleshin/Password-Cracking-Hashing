@@ -80,7 +80,7 @@ I reviewed the Johnny **Settings** page, where the John the Ripper executable pa
 
 ### Screenshot 1: Johnny Configuration
 
-![](images/01-Johnny-Configuration.png)
+![](JTR-Configuration.png)
 
 *Figure 1: Johnny Settings showing the configured John the Ripper executable and detected engine.*
 
