@@ -23,7 +23,7 @@
 
 This repository documents my hands-on experience with **PDF password auditing, password recovery and capture-the-flag (CTF) validation** during Week 3 of the NetworkWalks Cybersecurity and Penetration Testing Internship, Batch B084.
 
-I used **Johnny**, a graphical interface for **John the Ripper**, to review a PDF password hash and a completed password-recovery result. I also examined three password-protected training PDF documents and recorded their subsequently opened congratulatory pages and challenge flags.
+I used **Johnny**, a graphical interface for **John the Ripper**, to review a PDF password hash and the resulting password recovery. I also examined three password-protected training PDFs and recorded the congratulatory pages and challenge flags that opened afterward.
 
 The screenshots confirm **one recovered password and show all three PDFs in both locked and opened states. They do **not** independently show a separate recovered password for each PDF or the precise attack mode and wordlist used.
 
@@ -81,7 +81,7 @@ I reviewed the Johnny **Settings** page, where the John the Ripper executable pa
 
 ### Screenshot 1: Johnny Configuration
 
-![Johnny settings and detected John the Ripper executable](images/01-Johnny-Configuration.png)
+![](JTR-Configuration.png)
 
 *Figure 1: Johnny Settings showing the configured John the Ripper executable and detected engine.*
 
