@@ -128,7 +128,41 @@ Uploading encrypted documents to third-party websites may expose sensitive mater
 
 ---
 
-## 🔑 Step 3: Review the Recovered PDF Password
+## 🧬 Step 3: Document the Extracted PDF Hash Strings
+
+After extracting the PDF password-audit data, I saved the resulting **John-compatible PDF hash representations** in three text files. The screenshots below document the strings for the three training PDFs. These are **PDF encryption/hash records, not plaintext passwords**. Their `$pdf$` prefix and fields describe parameters and data used by a compatible offline password-auditing tool.
+
+### Screenshot 11: Hash.txt — PDF1 Hash Record
+
+![Notepad showing the PDF hash record in Hash.txt](images/11-PDF1-Hash-Text.png)
+
+*Figure 11: The PDF1 hash representation recorded in Hash.txt, with the complete 192-character record visible in the screenshot.*
+
+### Screenshot 12: Hash2.txt — PDF2 Hash Record
+
+![Notepad showing the PDF hash record in Hash2.txt](images/12-PDF2-Hash-Text.png)
+
+*Figure 12: The PDF2 hash representation recorded in Hash2.txt.*
+
+### Screenshot 13: Hash3.txt — PDF3 Hash Record
+
+![Notepad showing the PDF hash record in Hash3.txt](images/13-PDF3-Hash-Text.png)
+
+*Figure 13: The PDF3 hash representation recorded in Hash3.txt.*
+
+### Hash Record Summary
+
+| Training file | Saved hash text file | Observed format | Evidence |
+|---|---|---|---|
+| My Locked PDF1.pdf | `Hash.txt` | `$pdf$` record, 192 characters | Figure 11 |
+| My Locked PDF2.pdf | `Hash2.txt` | `$pdf$` record, 192 characters | Figure 12 |
+| My Locked PDF3.pdf | `Hash3.txt` | `$pdf$` record, 192 characters | Figure 13 |
+
+**Important distinction:** The screenshots show the hash representations stored as text; they do not prove that every record was successfully cracked. The Johnny screenshot independently confirms one recovered password (`good-luck`) for one PDF hash. I preserved the full records in the screenshots rather than risk introducing transcription errors into the report. Hash records from real confidential documents should not be uploaded to public repositories.
+
+---
+
+## 🔑 Step 4: Review the Recovered PDF Password
 
 I examined the **Passwords** page, which displayed a recovered password for one PDF hash. The bottom status bar reported that the job was complete.
 
@@ -152,7 +186,7 @@ This result demonstrates that the tested password could be recovered in the exer
 
 ---
 
-## 📂 Step 4: Review Johnny's Password File Import Options
+## 📂 Step 5: Review Johnny's Password File Import Options
 
 I examined the **Open password file** menu, which offers a password file in PASSWD format or another file format supported by John (`*2john`).
 
@@ -166,7 +200,7 @@ The screenshot records the available import options. It does **not** show which 
 
 ---
 
-## 🔒 Step 5: Inspect the Locked Training PDFs
+## 🔒 Step 6: Inspect the Locked Training PDFs
 
 I opened each of the three training PDFs in the PDF viewer. Each document initially displayed a password-entry prompt.
 
@@ -197,7 +231,7 @@ I opened each of the three training PDFs in the PDF viewer. Each document initia
 
 ---
 
-## 🏁 Step 6: Review the Opened PDFs and Captured Flags
+## 🏁 Step 7: Review the Opened PDFs and Captured Flags
 
 Later screenshots show all three training PDFs opened successfully. The pages contain NetworkWalks congratulatory messages and highlighted flags.
 
@@ -273,6 +307,7 @@ Through this practical project, I developed a better understanding of:
 8. Differentiating observed evidence from unverified assumptions.
 9. Explaining the security importance of password strength.
 10. Preparing clear technical documentation supported by screenshots.
+11. Recording PDF hash representations in separate text files and distinguishing hashes from recovered passwords.
 
 ---
 
@@ -280,6 +315,9 @@ Through this practical project, I developed a better understanding of:
 
 | File | Description |
 |---|---|
+| [11-PDF1-Hash-Text.png](images/11-PDF1-Hash-Text.png) | Hash.txt screenshot showing PDF1 hash record |
+| [12-PDF2-Hash-Text.png](images/12-PDF2-Hash-Text.png) | Hash2.txt screenshot showing PDF2 hash record |
+| [13-PDF3-Hash-Text.png](images/13-PDF3-Hash-Text.png) | Hash3.txt screenshot showing PDF3 hash record |
 | [10-PDF-Hash-Extractor.png](images/10-PDF-Hash-Extractor.png) | OnlineHashCrack extraction of a PDF hash from My Locked PDF3.pdf |
 | [01-Johnny-Configuration.png](images/01-Johnny-Configuration.png) | Johnny configuration and detected John the Ripper executable |
 | [02-Recovered-Password.png](images/02-Recovered-Password.png) | Recovered PDF password and completed status |
