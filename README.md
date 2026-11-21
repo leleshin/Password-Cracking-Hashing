@@ -25,7 +25,7 @@ This repository documents my hands-on experience with **PDF password auditing, p
 
 I used **Johnny**, a graphical interface for **John the Ripper**, to review a PDF password hash and a completed password-recovery result. I also examined three password-protected training PDF documents and recorded their subsequently opened congratulatory pages and challenge flags.
 
-The screenshots confirm **one recovered password (`good-luck`)** and show all three PDFs in both locked and opened states. They do **not** independently show a separate recovered password for each PDF or the precise attack mode and wordlist used.
+The screenshots confirm **one recovered password and show all three PDFs in both locked and opened states. They do **not** independently show a separate recovered password for each PDF or the precise attack mode and wordlist used.
 
 **Module focus:** PDF password security assessment and recovery using Johnny / John the Ripper.
 
