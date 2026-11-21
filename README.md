@@ -63,6 +63,7 @@ The practical learning activities include:
 |---|---|
 | Windows desktop | Run Johnny and the PDF viewer |
 | Johnny | Graphical interface to manage and inspect password auditing |
+| OnlineHashCrack PDF Hash Extractor | Browser-based extraction of a PDF hash for an authorized audit |
 | John the Ripper 1.9.0-jumbo-1 OMP | Password auditing engine detected by Johnny |
 | PDF format | Password hash format shown in Johnny |
 | PDF viewer | Inspect password prompts and opened training files |
@@ -80,7 +81,7 @@ I reviewed the Johnny **Settings** page, where the John the Ripper executable pa
 
 ### Screenshot 1: Johnny Configuration
 
-![](JTR-Configuration.png)
+![Johnny settings and detected John the Ripper executable](images/01-Johnny-Configuration.png)
 
 *Figure 1: Johnny Settings showing the configured John the Ripper executable and detected engine.*
 
@@ -98,13 +99,42 @@ I learned that Johnny depends on a working John the Ripper executable to perform
 
 ---
 
-## 🔑 Step 2: Review the Recovered PDF Password
+## 🧾 Step 2: Extract a PDF Hash for the Authorized Test
+
+I used the **OnlineHashCrack PDF Hash Extractor** web page to prepare an encrypted training PDF for password auditing. The screenshot shows **My Locked PDF3.pdf** selected and the site reporting that extraction was complete. The output field contains a PDF hash representation beginning with `$pdf$`, suitable for use with compatible password-auditing tools.
+
+### Screenshot 10: PDF Hash Extraction
+
+![OnlineHashCrack PDF hash extractor showing My Locked PDF3.pdf and extracted hash output](images/10-PDF-Hash-Extractor.png)
+
+*Figure 10: Browser-based PDF hash extraction for My Locked PDF3.pdf, with the extracted PDF hash visible in the output area.*
+
+### Observations
+
+| Field | Result shown in my screenshot |
+|---|---|
+| Website | OnlineHashCrack PDF Hash Extractor |
+| File selected | My Locked PDF3.pdf |
+| Processing status | Extraction complete |
+| Output | PDF hash string beginning with `$pdf$` |
+| Stated maximum upload size | 100 MB |
+| Stated data handling | Site says files are deleted after extraction; this was not independently verified |
+
+The screenshot confirms **hash extraction**, not password recovery by the website. It also does not establish that this exact extracted hash was the one used in the Johnny recovery result. The full hash is intentionally not transcribed into this public report.
+
+### Security Consideration
+
+Uploading encrypted documents to third-party websites may expose sensitive material. For confidential files, I would use an approved local extraction method instead, following the organization's data-handling policy. In this exercise, I documented only the authorized training-file workflow.
+
+---
+
+## 🔑 Step 3: Review the Recovered PDF Password
 
 I examined the **Passwords** page, which displayed a recovered password for one PDF hash. The bottom status bar reported that the job was complete.
 
 ### Screenshot 2: Password Recovery Result
 
-![](Crack1.png)
+![Johnny recovered PDF password and status](images/02-Recovered-Password.png)
 
 *Figure 2: Johnny listing the recovered password and reporting one cracked hash with none remaining.*
 
@@ -122,7 +152,7 @@ This result demonstrates that the tested password could be recovered in the exer
 
 ---
 
-## 📂 Step 3: Review Johnny's Password File Import Options
+## 📂 Step 4: Review Johnny's Password File Import Options
 
 I examined the **Open password file** menu, which offers a password file in PASSWD format or another file format supported by John (`*2john`).
 
@@ -136,7 +166,7 @@ The screenshot records the available import options. It does **not** show which 
 
 ---
 
-## 🔒 Step 4: Inspect the Locked Training PDFs
+## 🔒 Step 5: Inspect the Locked Training PDFs
 
 I opened each of the three training PDFs in the PDF viewer. Each document initially displayed a password-entry prompt.
 
@@ -167,7 +197,7 @@ I opened each of the three training PDFs in the PDF viewer. Each document initia
 
 ---
 
-## 🏁 Step 5: Review the Opened PDFs and Captured Flags
+## 🏁 Step 6: Review the Opened PDFs and Captured Flags
 
 Later screenshots show all three training PDFs opened successfully. The pages contain NetworkWalks congratulatory messages and highlighted flags.
 
@@ -250,6 +280,7 @@ Through this practical project, I developed a better understanding of:
 
 | File | Description |
 |---|---|
+| [10-PDF-Hash-Extractor.png](images/10-PDF-Hash-Extractor.png) | OnlineHashCrack extraction of a PDF hash from My Locked PDF3.pdf |
 | [01-Johnny-Configuration.png](images/01-Johnny-Configuration.png) | Johnny configuration and detected John the Ripper executable |
 | [02-Recovered-Password.png](images/02-Recovered-Password.png) | Recovered PDF password and completed status |
 | [03-Open-Hash-Menu.png](images/03-Open-Hash-Menu.png) | Johnny import menu for password file or John format |
