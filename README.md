@@ -146,7 +146,7 @@ After extracting the PDF password-audit data, I saved the resulting **John-compa
 
 ### Screenshot 13: Hash3.txt — PDF3 Hash Record
 
-![Notepad showing the PDF hash record in Hash3.txt](images/13-PDF3-Hash-Text.png)
+![](Hash3.png)
 
 *Figure 13: The PDF3 hash representation recorded in Hash3.txt.*
 
