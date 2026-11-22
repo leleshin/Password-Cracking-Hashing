@@ -203,7 +203,9 @@ I began by opening each training PDF and observing its password prompt. The cont
 
 ### Screenshot 11: Opened PDF3 — Congratulations Page
 
-![Opened PDF3 with highlighted flag](images/07-PDF3-Flag.png)
+![](PDF-Result1.png)
+![](PDF-Result2.png)
+![](PDF-Result3.png)
 
 *Figure 11: PDF3 opened to a NetworkWalks congratulatory page with a highlighted flag.*
 
