@@ -23,7 +23,7 @@
 
 This repository documents my Week 3 hands-on work in **PDF password security assessment, encrypted PDF hash extraction, authorized password recovery, and capture-the-flag (CTF) validation** during the **NetworkWalks Cybersecurity and Penetration Testing Internship (Batch B084)**.
 
-I examined three password-protected training documents (`My Locked PDF1.pdf`, `My Locked PDF2.pdf`, and `My Locked PDF3.pdf`). I documented the locked-file prompts, used an online PDF hash extraction tool for a training file, and saved three PDF hash representations in `Hash.txt`, `Hash2.txt`, and `Hash3.txt`. I also reviewed the **Johnny** graphical interface and its **John the Ripper** engine, including a completed recovery result for one PDF hash.
+I configured Johnny and reviewed the John the Ripper engine before examining three password-protected training documents (`My Locked PDF1.pdf`, `My Locked PDF2.pdf`, and `My Locked PDF3.pdf`). I documented the locked-file prompts, used an online PDF hash extraction tool for a training file, and saved three PDF hash representations in `Hash.txt`, `Hash2.txt`, and `Hash3.txt`. I also reviewed the **Johnny** graphical interface and its **John the Ripper** engine, including a completed recovery result for one PDF hash.
 
 The Johnny evidence confirms **one recovered training password, `good-luck`**, with the status **1 cracked, 0 remaining**. Separate screenshots show all three PDFs subsequently opened to NetworkWalks congratulatory or flag pages. These images **do not independently establish which password opened each document**, nor do they show the exact attack mode, wordlist, or cracking duration. This report distinguishes verified observations from details not visible in the evidence.
 
@@ -32,27 +32,22 @@ The Johnny evidence confirms **one recovered training password, `good-luck`**, w
 
 ### Practical Activities
 
-- Examine three password-protected training PDFs and document their locked states.
-- Extract a PDF hash using the OnlineHashCrack PDF Hash Extractor.
-- Save and inspect three John-compatible PDF hash records in text files.
-- Verify the Johnny configuration and detected John the Ripper executable.
-- Review Johnny’s hash import menu and completed password recovery output.
-- Open the training PDFs and document the displayed challenge flags.
-- Interpret security implications and record the limitations of the evidence.
+1. Configure Johnny and verify the John the Ripper engine and hash import options.
+2. Extract PDF hash data from the authorized training documents.
+3. Save and review the three hash records in `Hash.txt`, `Hash2.txt` and `Hash3.txt`.
+4. Review the cracked password and completed audit status in Johnny.
+5. Compare locked and opened PDF1, PDF2 and PDF3 and document the CTF results.
 
 ---
 
 ## 🎯 Project Objectives
 
-1. Understand PDF password protection and the purpose of an offline password audit.
-2. Extract and preserve PDF hash representations from authorized training documents.
-3. Distinguish PDF hash records from recovered plaintext passwords.
-4. Configure Johnny to use the installed John the Ripper engine.
-5. Identify the appropriate hash-import workflow and interpret recovery results.
-6. Document locked and opened states of three training PDF files.
-7. Record visible CTF flags accurately without inferring unsupported results.
-8. Evaluate weak-password risks and recommend better protection practices.
-9. Produce a reproducible, evidence-based report within the authorized scope.
+1. Configure Johnny to use the installed John the Ripper executable.
+2. Understand how encrypted PDF hash records are extracted for authorized audits.
+3. Organize and distinguish the three extracted PDF hash records from plaintext passwords.
+4. Interpret the completed password recovery status and its limitations.
+5. Validate the three training PDF challenge pages and record visible CTF flags.
+6. Explain password-security risks and document findings accurately and ethically.
 
 ---
 
@@ -72,41 +67,51 @@ The Johnny evidence confirms **one recovered training password, `good-luck`**, w
 
 ---
 
-## 🔒 Step 1: Inspect the Password-Protected Training PDFs
+## ⚙️ Step 1: Configure Johnny and John the Ripper
 
-I began by opening each training PDF and observing its password prompt. The content was not displayed until the documents were later opened.
+I inspected Johnny's **Settings** page and confirmed that the application detected its configured John the Ripper executable.
 
-### Screenshot 1: Locked PDF1
+### Screenshot 1: Johnny Configuration
 
-![Password prompt for PDF1](images/04-PDF1-Locked.png)
+![Johnny settings and detected John the Ripper engine](images/01-Johnny-Configuration.png)
 
-*Figure 1: `My Locked PDF1.pdf` requests a password.*
+*Figure 1: Johnny Settings with the detected John the Ripper executable.*
 
-### Screenshot 2: Locked PDF2
+| Setting | Observed value |
+|---|---|
+| Engine | John the Ripper 1.9.0-jumbo-1 OMP |
+| Platform | Cygwin 64-bit x86_64 AVX2 AC |
+| Executable | `C:/Users/USER/Downloads/01. JTR_John CLI Win x64/john-1.9.0-jumbo-1-win64/run/john.exe` |
+| Update interval | 15 seconds |
+| Interface language | English |
 
-![Password prompt for PDF2](images/05-PDF2-Locked.png)
-
-*Figure 2: `My Locked PDF2.pdf` requests a password.*
-
-### Screenshot 3: Locked PDF3
-
-![Password prompt for PDF3](images/06-PDF3-Locked.png)
-
-*Figure 3: `My Locked PDF3.pdf` requests a password.*
-
-**Observation:** Each PDF displayed a password-entry dialog. This establishes that password protection was enabled, but does not establish password strength or that the files shared the same password.
+**Learning point:** Johnny provides a graphical interface, while John the Ripper performs the underlying password auditing.
 
 ---
 
-## 🧾 Step 2: Extract a PDF Hash for the Authorized Test
+### Importing PDF Hash Records into Johnny
+
+Johnny provides an **Open password file** menu with options to load a password file or another supported John-format input. I reviewed this interface as part of preparing and inspecting the audit workflow.
+
+### Screenshot 2: Johnny File-Import Menu
+
+![Johnny menu showing password-file import choices](images/03-Open-Hash-Menu.png)
+
+*Figure 2: Johnny's file-import options.*
+
+**Evidence limitation:** The screenshot shows the available import choices; it does not independently show which file was selected or the exact sequence of the cracking run.
+
+---
+
+## 🧾 Step 2: Extract PDF Hashes from the Training Files
 
 I used the **OnlineHashCrack PDF Hash Extractor** in a browser to extract a hash representation from the training file `My Locked PDF3.pdf`. The website reported that extraction was complete and displayed an output beginning with `$pdf$`.
 
-### Screenshot 4: Online PDF Hash Extraction
+### Screenshot 3: Online PDF Hash Extraction
 
 ![OnlineHashCrack extraction for PDF3](images/10-PDF-Hash-Extractor.png)
 
-*Figure 4: PDF3 selected in the extractor with a generated PDF hash record.*
+*Figure 3: PDF3 selected in the extractor with a generated PDF hash record.*
 
 | Field | Evidence |
 |---|---|
@@ -122,83 +127,47 @@ I used the **OnlineHashCrack PDF Hash Extractor** in a browser to extract a hash
 
 ---
 
-## 🧬 Step 3: Save and Review the Extracted PDF Hash Records
+## 🧬 Step 3: Document Hash.txt, Hash2.txt and Hash3.txt
 
 I recorded the PDF encryption/hash representations in three separate text files. These `$pdf$` records contain data used by compatible offline password-auditing tools; they are **not plaintext passwords**.
 
-### Screenshot 5: `Hash.txt` — PDF1
+### Screenshot 4: `Hash.txt` — PDF1
 
 ![PDF1 hash text](images/11-PDF1-Hash-Text.png)
 
-*Figure 5: PDF1 hash record saved in `Hash.txt`.*
+*Figure 4: PDF1 hash record saved in `Hash.txt`.*
 
-### Screenshot 6: `Hash2.txt` — PDF2
+### Screenshot 5: `Hash2.txt` — PDF2
 
 ![PDF2 hash text](images/12-PDF2-Hash-Text.png)
 
-*Figure 6: PDF2 hash record saved in `Hash2.txt`.*
+*Figure 5: PDF2 hash record saved in `Hash2.txt`.*
 
-### Screenshot 7: `Hash3.txt` — PDF3
+### Screenshot 6: `Hash3.txt` — PDF3
 
 ![PDF3 hash text](images/13-PDF3-Hash-Text.png)
 
-*Figure 7: PDF3 hash record saved in `Hash3.txt`.*
+*Figure 6: PDF3 hash record saved in `Hash3.txt`.*
 
 | Training document | Text file | Format visible | Evidence |
 |---|---|---|---|
-| PDF1 | `Hash.txt` | `$pdf$` record | Figure 5 |
-| PDF2 | `Hash2.txt` | `$pdf$` record | Figure 6 |
-| PDF3 | `Hash3.txt` | `$pdf$` record | Figure 7 |
+| PDF1 | `Hash.txt` | `$pdf$` record | Figure 4 |
+| PDF2 | `Hash2.txt` | `$pdf$` record | Figure 4 |
+| PDF3 | `Hash3.txt` | `$pdf$` record | Figure 5 |
 
 The screenshots display the full strings, but this README does not duplicate them as typed text to avoid transcription mistakes. The existence of three hash files does **not** mean that all three hashes were cracked.
 
 ---
 
-## ⚙️ Step 4: Verify Johnny and John the Ripper Configuration
-
-I inspected Johnny's **Settings** page and confirmed that the application detected its configured John the Ripper executable.
-
-### Screenshot 8: Johnny Configuration
-
-![Johnny settings and detected John the Ripper engine](images/01-Johnny-Configuration.png)
-
-*Figure 8: Johnny Settings with the detected John the Ripper executable.*
-
-| Setting | Observed value |
-|---|---|
-| Engine | John the Ripper 1.9.0-jumbo-1 OMP |
-| Platform | Cygwin 64-bit x86_64 AVX2 AC |
-| Executable | `C:/Users/USER/Downloads/01. JTR_John CLI Win x64/john-1.9.0-jumbo-1-win64/run/john.exe` |
-| Update interval | 15 seconds |
-| Interface language | English |
-
-**Learning point:** Johnny provides a graphical interface, while John the Ripper performs the underlying password auditing.
-
----
-
-## 📂 Step 5: Review the PDF Hash Import Workflow
-
-Johnny provides an **Open password file** menu with options to load a password file or another supported John-format input. I reviewed this interface as part of preparing and inspecting the audit workflow.
-
-### Screenshot 9: Johnny File-Import Menu
-
-![Johnny menu showing password-file import choices](images/03-Open-Hash-Menu.png)
-
-*Figure 9: Johnny's file-import options.*
-
-**Evidence limitation:** The screenshot shows the available import choices; it does not independently show which file was selected or the exact sequence of the cracking run.
-
----
-
-## 🔑 Step 6: Review the Completed Password-Recovery Result
+## 🔑 Step 4: Review the Cracked PDF Password
 
 I examined the Johnny **Passwords** view, where the application displayed one recovered password for a PDF hash.
 
-### Screenshot 10: Recovered PDF Password
+### Screenshot 7: Recovered PDF Password
 
 ![Johnny password recovery result](images/02-Recovered-Password.png)
 
-*Figure 10: Johnny displays a recovered password and a completed audit status.*
+*Figure 7: Johnny displays a recovered password and a completed audit status.*
 
 | Result | Value shown |
 |---|---|
@@ -212,37 +181,64 @@ I examined the Johnny **Passwords** view, where the application displayed one re
 
 ---
 
-## 🏁 Step 7: Validate Opened PDFs and CTF Flags
+## 🏁 Step 5: Verify PDF1, PDF2 and PDF3 Results and Captured Flags
 
-Later screenshots show the three training PDFs opened to congratulatory pages. I recorded the visible challenge evidence without assuming that all three files were opened using the single password shown in Johnny.
+After observing the password prompts, later screenshots show the three training PDFs opened to congratulatory pages. I recorded the visible challenge evidence without assuming that all three files were opened using the single password shown in Johnny.
 
-### Screenshot 11: Opened PDF3 — Congratulations Page
+### Password-Protected PDFs Before Recovery
 
-![Opened PDF3 with highlighted flag](images/07-PDF3-Flag.png)
+I began by opening each training PDF and observing its password prompt. The content was not displayed until the documents were later opened.
 
-*Figure 11: PDF3 opened to a NetworkWalks congratulatory page with a highlighted flag.*
+### Screenshot 8: Locked PDF1
 
-**Flag note:** The flag is visible in the screenshot, but the small characters should be verified against the original PDF before submitting a typed value.
+![Password prompt for PDF1](images/04-PDF1-Locked.png)
 
-### Screenshot 12: Opened PDF1 — First Captured Flag
+*Figure 8: `My Locked PDF1.pdf` requests a password.*
+
+### Screenshot 9: Locked PDF2
+
+![Password prompt for PDF2](images/05-PDF2-Locked.png)
+
+*Figure 9: `My Locked PDF2.pdf` requests a password.*
+
+### Screenshot 10: Locked PDF3
+
+![Password prompt for PDF3](images/06-PDF3-Locked.png)
+
+*Figure 10: `My Locked PDF3.pdf` requests a password.*
+
+**Observation:** Each PDF displayed a password-entry dialog. This establishes that password protection was enabled, but does not establish password strength or that the files shared the same password.
+
+---
+
+
+### Screenshot 11: Opened PDF1 — First Captured Flag
 
 ![Opened PDF1 with captured flag](images/08-PDF1-Flag.png)
 
-*Figure 12: PDF1 opened to a congratulatory page.*
+*Figure 11: PDF1 opened to a congratulatory page.*
 
 **Visible flag:** `nw{cybersecurity_flag_captured_2608}`
 
-### Screenshot 13: Opened PDF2 — Second Captured Flag
+### Screenshot 12: Opened PDF2 — Second Captured Flag
 
 ![Opened PDF2 with captured flag](images/09-PDF2-Flag.png)
 
-*Figure 13: PDF2 opened to a congratulatory page.*
+*Figure 12: PDF2 opened to a congratulatory page.*
 
 **Visible flag:** `nw{networkwalks_persistence_jtr_270521}`
 
 **Interpretation:** These screenshots document access to the challenge pages, but they do not independently identify which password was used to open each file.
 
 ---
+
+### Screenshot 13: Opened PDF3 — Congratulations Page
+
+![Opened PDF3 with highlighted flag](images/07-PDF3-Flag.png)
+
+*Figure 13: PDF3 opened to a NetworkWalks congratulatory page with a highlighted flag.*
+
+**Flag note:** The flag is visible in the screenshot, but the small characters should be verified against the original PDF before submitting a typed value.
 
 ## 📊 Findings and Interpretation
 
@@ -294,21 +290,21 @@ Through this practical project, I improved my understanding of:
 
 ## 📎 Evidence and Report Files
 
-| File | Description |
-|---|---|
-| [04-PDF1-Locked.png](images/04-PDF1-Locked.png) | PDF1 password prompt (Figure 1) |
-| [05-PDF2-Locked.png](images/05-PDF2-Locked.png) | PDF2 password prompt (Figure 2) |
-| [06-PDF3-Locked.png](images/06-PDF3-Locked.png) | PDF3 password prompt (Figure 3) |
-| [10-PDF-Hash-Extractor.png](images/10-PDF-Hash-Extractor.png) | PDF3 hash extraction (Figure 4) |
-| [11-PDF1-Hash-Text.png](images/11-PDF1-Hash-Text.png) | `Hash.txt` (Figure 5) |
-| [12-PDF2-Hash-Text.png](images/12-PDF2-Hash-Text.png) | `Hash2.txt` (Figure 6) |
-| [13-PDF3-Hash-Text.png](images/13-PDF3-Hash-Text.png) | `Hash3.txt` (Figure 7) |
-| [01-Johnny-Configuration.png](images/01-Johnny-Configuration.png) | Johnny settings (Figure 8) |
-| [03-Open-Hash-Menu.png](images/03-Open-Hash-Menu.png) | Johnny import menu (Figure 9) |
-| [02-Recovered-Password.png](images/02-Recovered-Password.png) | Completed recovery (Figure 10) |
-| [07-PDF3-Flag.png](images/07-PDF3-Flag.png) | PDF3 challenge page (Figure 11) |
-| [08-PDF1-Flag.png](images/08-PDF1-Flag.png) | PDF1 challenge page (Figure 12) |
-| [09-PDF2-Flag.png](images/09-PDF2-Flag.png) | PDF2 challenge page (Figure 13) |
+| Workflow stage | Screenshot file | Description |
+|---|---|---|
+| 1. Johnny configuration | [01-Johnny-Configuration.png](images/01-Johnny-Configuration.png) | John the Ripper executable and detected engine |
+| 1. Hash import | [03-Open-Hash-Menu.png](images/03-Open-Hash-Menu.png) | Johnny import options |
+| 2. PDF hash extraction | [10-PDF-Hash-Extractor.png](images/10-PDF-Hash-Extractor.png) | OnlineHashCrack PDF3 extraction |
+| 3. PDF1 hash | [11-PDF1-Hash-Text.png](images/11-PDF1-Hash-Text.png) | `Hash.txt` |
+| 3. PDF2 hash | [12-PDF2-Hash-Text.png](images/12-PDF2-Hash-Text.png) | `Hash2.txt` |
+| 3. PDF3 hash | [13-PDF3-Hash-Text.png](images/13-PDF3-Hash-Text.png) | `Hash3.txt` |
+| 4. Cracked password | [02-Recovered-Password.png](images/02-Recovered-Password.png) | Johnny recovery status |
+| 5. PDF1 locked | [04-PDF1-Locked.png](images/04-PDF1-Locked.png) | Password prompt |
+| 5. PDF2 locked | [05-PDF2-Locked.png](images/05-PDF2-Locked.png) | Password prompt |
+| 5. PDF3 locked | [06-PDF3-Locked.png](images/06-PDF3-Locked.png) | Password prompt |
+| 5. PDF1 result | [08-PDF1-Flag.png](images/08-PDF1-Flag.png) | Opened PDF1 and flag |
+| 5. PDF2 result | [09-PDF2-Flag.png](images/09-PDF2-Flag.png) | Opened PDF2 and flag |
+| 5. PDF3 result | [07-PDF3-Flag.png](images/07-PDF3-Flag.png) | Opened PDF3 and flag |
 
 **GitHub setup:** Upload `README.md` and the entire `images` folder to the same repository root. Keep filenames and folder structure unchanged so every image renders correctly. Badges use externally hosted Shields.io images.
 
@@ -342,4 +338,5 @@ Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT
 *— Lamidi Olatunji Micheal Eleshin*
 
 </div>
+
 
