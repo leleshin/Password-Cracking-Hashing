@@ -259,15 +259,6 @@ Through this practical project, I improved my understanding of:
 
 ---
 
-## 📎 Evidence and Report Files
-
-**GitHub setup:** Upload `README.md` and the entire `images` folder to the same repository root. Keep filenames and folder structure unchanged so every image renders correctly. Badges use externally hosted Shields.io images.
-
-### Video Demo: Demo
-![](Password-Cracking-Hashing.mp4)
-
----
-
 ## 🛡️ Ethical Security Statement
 
 I completed this activity as part of an authorized educational cybersecurity exercise using NetworkWalks training files. Password recovery must be limited to documents and systems for which permission has been granted. The recovered password belongs to this training exercise; real client credentials, confidential files, and private hashes must not be published.
@@ -289,5 +280,5 @@ Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT
 
 ---
 
-
+![](Password-Cracking-Hashing.mp4)
 
