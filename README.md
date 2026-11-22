@@ -194,7 +194,9 @@ I examined the **Open password file** menu, which offers a password file in PASS
 
 ### Screenshot 3: Johnny Import Menu
 
-![Johnny menu with password file import options](images/03-Open-Hash-Menu.png)
+![](PDF-Result1.png)
+![](PDF-Result2.png)
+![](PDF-Result3.png)
 
 *Figure 3: Johnny's menu for opening a password file or another John-compatible format.*
 
