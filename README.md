@@ -206,7 +206,7 @@ I began by opening each training PDF and observing its password prompt. The cont
 ![](PDF-Result1.png)
 ![](PDF-Result2.png)
 ![](PDF-Result3.png)
-![](Password-Cracking-Hashing.mp4)
+
 *Figure 11: PDF3 opened to a NetworkWalks congratulatory page with a highlighted flag.*
 
 **Flag note:** The flag is visible in the screenshot, but the small characters should be verified against the original PDF before submitting a typed value.
