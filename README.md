@@ -186,21 +186,6 @@ I examined the **Passwords** page, which displayed a recovered password for one 
 
 This result demonstrates that the tested password could be recovered in the exercise. The screenshot does not show the attack mode, elapsed cracking time or candidate wordlist; I have not assumed those details.
 
----
-
-## 📂 Step 5: Review Johnny's Password File Import Options
-
-I examined the **Open password file** menu, which offers a password file in PASSWD format or another file format supported by John (`*2john`).
-
-### Screenshot 3: Johnny Import Menu
-
-
-*Figure 3: Johnny's menu for opening a password file or another John-compatible format.*
-
-The screenshot records the available import options. It does **not** show which menu item was used to create the previously loaded hash, so I cannot verify the exact extraction steps from this evidence alone.
-
----
-
 ## 🔒 Step 6: Inspect the Locked Training PDFs
 
 I opened each of the three training PDFs in the PDF viewer. Each document initially displayed a password-entry prompt.
