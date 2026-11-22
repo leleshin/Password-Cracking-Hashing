@@ -199,33 +199,13 @@ I began by opening each training PDF and observing its password prompt. The cont
 **Observation:** Each PDF displayed a password-entry dialog. This establishes that password protection was enabled, but does not establish password strength or that the files shared the same password.
 
 ---
-
-
-### Screenshot 11: Opened PDF1 — First Captured Flag
-
-![Opened PDF1 with captured flag](images/08-PDF1-Flag.png)
-
-*Figure 11: PDF1 opened to a congratulatory page.*
-
-**Visible flag:** `nw{cybersecurity_flag_captured_2608}`
-
-### Screenshot 12: Opened PDF2 — Second Captured Flag
-
-![Opened PDF2 with captured flag](images/09-PDF2-Flag.png)
-
-*Figure 12: PDF2 opened to a congratulatory page.*
-
-**Visible flag:** `nw{networkwalks_persistence_jtr_270521}`
-
-**Interpretation:** These screenshots document access to the challenge pages, but they do not independently identify which password was used to open each file.
-
 ---
 
-### Screenshot 13: Opened PDF3 — Congratulations Page
+### Screenshot 11: Opened PDF3 — Congratulations Page
 
 ![Opened PDF3 with highlighted flag](images/07-PDF3-Flag.png)
 
-*Figure 13: PDF3 opened to a NetworkWalks congratulatory page with a highlighted flag.*
+*Figure 11: PDF3 opened to a NetworkWalks congratulatory page with a highlighted flag.*
 
 **Flag note:** The flag is visible in the screenshot, but the small characters should be verified against the original PDF before submitting a typed value.
 
@@ -279,22 +259,6 @@ Through this practical project, I improved my understanding of:
 
 ## 📎 Evidence and Report Files
 
-| Workflow stage | Screenshot file | Description |
-|---|---|---|
-| 1. Johnny configuration | [01-Johnny-Configuration.png](images/01-Johnny-Configuration.png) | John the Ripper executable and detected engine |
-| 1. Hash import | [03-Open-Hash-Menu.png](images/03-Open-Hash-Menu.png) | Johnny import options |
-| 2. PDF hash extraction | [10-PDF-Hash-Extractor.png](images/10-PDF-Hash-Extractor.png) | OnlineHashCrack PDF3 extraction |
-| 3. PDF1 hash | [11-PDF1-Hash-Text.png](images/11-PDF1-Hash-Text.png) | `Hash.txt` |
-| 3. PDF2 hash | [12-PDF2-Hash-Text.png](images/12-PDF2-Hash-Text.png) | `Hash2.txt` |
-| 3. PDF3 hash | [13-PDF3-Hash-Text.png](images/13-PDF3-Hash-Text.png) | `Hash3.txt` |
-| 4. Cracked password | [02-Recovered-Password.png](images/02-Recovered-Password.png) | Johnny recovery status |
-| 5. PDF1 locked | [04-PDF1-Locked.png](images/04-PDF1-Locked.png) | Password prompt |
-| 5. PDF2 locked | [05-PDF2-Locked.png](images/05-PDF2-Locked.png) | Password prompt |
-| 5. PDF3 locked | [06-PDF3-Locked.png](images/06-PDF3-Locked.png) | Password prompt |
-| 5. PDF1 result | [08-PDF1-Flag.png](images/08-PDF1-Flag.png) | Opened PDF1 and flag |
-| 5. PDF2 result | [09-PDF2-Flag.png](images/09-PDF2-Flag.png) | Opened PDF2 and flag |
-| 5. PDF3 result | [07-PDF3-Flag.png](images/07-PDF3-Flag.png) | Opened PDF3 and flag |
-
 **GitHub setup:** Upload `README.md` and the entire `images` folder to the same repository root. Keep filenames and folder structure unchanged so every image renders correctly. Badges use externally hosted Shields.io images.
 
 ---
@@ -320,12 +284,5 @@ Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT
 
 ---
 
-<div align="center">
-
-**“Cybersecurity begins with vigilance. Failure to prevent a threat today may become tomorrow's data disaster.”**
-
-*— Lamidi Olatunji Micheal Eleshin*
-
-</div>
 
 
