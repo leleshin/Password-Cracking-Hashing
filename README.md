@@ -192,19 +192,19 @@ I opened each of the three training PDFs in the PDF viewer. Each document initia
 
 ### Screenshot 4: Locked PDF1
 
-![Password prompt for My Locked PDF1](images/04-PDF1-Locked.png)
+![](PDF1.png)
 
 *Figure 4: My Locked PDF1.pdf requesting a password before opening.*
 
 ### Screenshot 5: Locked PDF2
 
-![Password prompt for My Locked PDF2](images/05-PDF2-Locked.png)
+![](PDF2.png)
 
 *Figure 5: My Locked PDF2.pdf requesting a password before opening.*
 
 ### Screenshot 6: Locked PDF3
 
-![Password prompt for My Locked PDF3](images/06-PDF3-Locked.png)
+![](PDF3.png)
 
 *Figure 6: My Locked PDF3.pdf requesting a password before opening.*
 
