@@ -153,6 +153,8 @@ I examined the Johnny **Passwords** view, where the application displayed one re
 ### Screenshot 7: Recovered PDF Password
 
 ![](Crack1.png)
+![](Crack2.png)
+![](Crack3.png)
 
 *Figure 7: Johnny displays a recovered password and a completed audit status.*
 
