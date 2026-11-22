@@ -133,19 +133,19 @@ I recorded the PDF encryption/hash representations in three separate text files.
 
 ### Screenshot 4: `Hash.txt` — PDF1
 
-![PDF1 hash text](images/11-PDF1-Hash-Text.png)
+![](Hash1.png)
 
 *Figure 4: PDF1 hash record saved in `Hash.txt`.*
 
 ### Screenshot 5: `Hash2.txt` — PDF2
 
-![PDF2 hash text](images/12-PDF2-Hash-Text.png)
+![](Hash2.png)
 
 *Figure 5: PDF2 hash record saved in `Hash2.txt`.*
 
 ### Screenshot 6: `Hash3.txt` — PDF3
 
-![PDF3 hash text](images/13-PDF3-Hash-Text.png)
+![](Hash3.png)
 
 *Figure 6: PDF3 hash record saved in `Hash3.txt`.*
 
