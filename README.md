@@ -169,6 +169,8 @@ I examined the **Passwords** page, which displayed a recovered password for one 
 ### Screenshot 2: Password Recovery Result
 
 ![](Crack1.png)
+![](Crack2.png)
+![](Crack3.png)
 
 *Figure 2: Johnny listing the recovered password and reporting one cracked hash with none remaining.*
 
