@@ -180,19 +180,19 @@ I began by opening each training PDF and observing its password prompt. The cont
 
 ### Screenshot 8: Locked PDF1
 
-![Password prompt for PDF1](images/04-PDF1-Locked.png)
+![](PDF1.png)
 
 *Figure 8: `My Locked PDF1.pdf` requests a password.*
 
 ### Screenshot 9: Locked PDF2
 
-![Password prompt for PDF2](images/05-PDF2-Locked.png)
+![](PDF2.png)
 
 *Figure 9: `My Locked PDF2.pdf` requests a password.*
 
 ### Screenshot 10: Locked PDF3
 
-![Password prompt for PDF3](images/06-PDF3-Locked.png)
+![](PDF3.png)
 
 *Figure 10: `My Locked PDF3.pdf` requests a password.*
 
