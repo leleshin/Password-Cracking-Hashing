@@ -194,9 +194,6 @@ I examined the **Open password file** menu, which offers a password file in PASS
 
 ### Screenshot 3: Johnny Import Menu
 
-![](PDF-Result1.png)
-![](PDF-Result2.png)
-![](PDF-Result3.png)
 
 *Figure 3: Johnny's menu for opening a password file or another John-compatible format.*
 
@@ -241,9 +238,9 @@ Later screenshots show all three training PDFs opened successfully. The pages co
 
 ### Screenshot 7: PDF3 Challenge Result
 
-![Opened PDF3 with congratulatory flag](images/07-PDF3-Flag.png)
-
-*Figure 7: Opened PDF3 displaying a NetworkWalks congratulatory page and highlighted flag.*
+![](PDF-Result1.png)
+![](PDF-Result2.png)
+![](PDF-Result3.png)
 
 ### Screenshot 8: PDF1 Challenge Result
 
