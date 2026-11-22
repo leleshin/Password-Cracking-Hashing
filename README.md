@@ -88,19 +88,6 @@ I inspected Johnny's **Settings** page and confirmed that the application detect
 **Learning point:** Johnny provides a graphical interface, while John the Ripper performs the underlying password auditing.
 
 ---
-
-### Importing PDF Hash Records into Johnny
-
-Johnny provides an **Open password file** menu with options to load a password file or another supported John-format input. I reviewed this interface as part of preparing and inspecting the audit workflow.
-
-### Screenshot 2: Johnny File-Import Menu
-
-![Johnny menu showing password-file import choices](images/03-Open-Hash-Menu.png)
-
-*Figure 2: Johnny's file-import options.*
-
-**Evidence limitation:** The screenshot shows the available import choices; it does not independently show which file was selected or the exact sequence of the cracking run.
-
 ---
 
 ## 🧾 Step 2: Extract PDF Hashes from the Training Files
