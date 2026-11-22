@@ -73,7 +73,7 @@ I inspected Johnny's **Settings** page and confirmed that the application detect
 
 ### Screenshot 1: Johnny Configuration
 
-![Johnny settings and detected John the Ripper engine](images/01-Johnny-Configuration.png)
+![](JTR-Configuration.png)
 
 *Figure 1: Johnny Settings with the detected John the Ripper executable.*
 
