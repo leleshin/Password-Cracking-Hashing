@@ -264,7 +264,7 @@ Through this practical project, I improved my understanding of:
 **GitHub setup:** Upload `README.md` and the entire `images` folder to the same repository root. Keep filenames and folder structure unchanged so every image renders correctly. Badges use externally hosted Shields.io images.
 
 ### Video Demo: Opened PDF3 — Congratulations Page
-![]()
+![](Password-Cracking-Hashing.mp4)
 ---
 
 ## 🛡️ Ethical Security Statement
