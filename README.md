@@ -109,7 +109,7 @@ I used the **OnlineHashCrack PDF Hash Extractor** in a browser to extract a hash
 
 ### Screenshot 3: Online PDF Hash Extraction
 
-![OnlineHashCrack extraction for PDF3](images/10-PDF-Hash-Extractor.png)
+![](PDF-Password-Extractor.png)
 
 *Figure 3: PDF3 selected in the extractor with a generated PDF hash record.*
 
